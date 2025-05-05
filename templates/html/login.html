@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+{% include 'html/header.html' %}
+{% if status %}
+<script>
+  alert('{{status}}');
+</script>
+{% endif %}
+<div class="container">
+            <!--grid--><br><br>
+    <br>
+            <div class="grid-form">
+                <div class="grid-form1">
+                    <br>
+                    <h2 id="forms-example" class=""> Login Form</h2>
+                    <form action="logint" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+
+                       
+                        <div class="form-group">
+                            <label for="exampleInputPassword1"></label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="email"
+                                   placeholder="Choose Your email"  required>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1"></label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                                   placeholder="Choose your password"  required>
+
+
+                        <!-- <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Check me out
+                          </label>
+                        </div> --> <br>
+                      <center>  <button type="submit" class="btn btn-primary">Submit</button></center>
+                    </form>
+                </div>
+            </div>
+<br><br><br><br>
+    </div>
+
+{% include 'html/footer.html' %}
+  {% endblock %}

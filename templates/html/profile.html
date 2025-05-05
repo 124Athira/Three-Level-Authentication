@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+{% include 'html/header.html' %}
+<style>
+  
+    .send_bt  {
+    width: 100%;
+    float: left;
+    background-color: #f2515e;
+    color: #fefeff;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+</style>
+
+<div class="container">
+            <!--grid--><br><br>
+    <br>
+            <div class="grid-form">
+                <div class="grid-form1">
+                    <br>
+                    <h2 id="forms-example" class=""> Profile </h2>
+           
+                <table align="center" class="table table-striped table-bordered" style="width:615px;">
+   
+                    <tbody>
+                    <br>
+                    <br>
+                    <tr>
+                       
+                        <td align="center" colspan="2" class="quantity-box"></td>
+                       
+                      </tr>
+                     <tr>
+                        <th class="col-sm-4"> Name</th>
+                        <td>{{result.name}}</td>
+                       
+                      </tr>
+                    
+                      <tr>
+                        <th>Email</th>
+                        <td>{{result.email}}</td>
+                       
+                      </tr>
+					  
+					  
+					   <tr>
+                        <th>Phone</th>
+                        <td>{{result.phone}}</td>
+                       
+                      </tr>
+                      
+                     
+                      
+                 
+                    
+                      <tr>
+                        <th>Password</th>
+                        <td>{{result.password}}</td>
+
+                      </tr>
+                      <tr>
+                      <td><a href="update/{{result.id}}">Edit</a><td>
+                      </tr>
+                      <!-- <tr>
+                        <th>Password</th>
+                        <td>{{result.password}}</td>
+
+                      </tr>
+                  -->
+                      
+                      
+                      
+                      
+                      
+                 
+                    </tbody>
+                    
+                  </table>
+                  <br><br><br>
+
+                  
+                </div>
+            </div>
+<br><br><br><br>
+    </div>
+
+{% include 'html/footer.html' %}
+  {% endblock %}

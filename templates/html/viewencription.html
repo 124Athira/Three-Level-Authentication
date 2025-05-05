@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+{% include 'html/header.html' %}
+
+<div class="container">
+            <!--grid--><br><br>
+    <br>
+            <div class="grid-form">
+                <div class="grid-form1">
+                    <br>
+                    <h2 id="forms-example" class=""> Dcryption </h2>
+                    <table border="1">
+
+                        <tr>
+
+                            <td>Document Name</td>
+                            <td>Decrypt</td>
+                        </tr>
+
+
+                        {% for i in res %}
+                        <tr>
+
+
+                            <td>{{i.document_name}}</td>
+                            <td> <a href="{% url 'decryyy' id=i.id %}">Decrypt</a> </td>
+                        </tr>
+
+{% endfor %}
+                    </table>
+                </div>
+            </div>
+<br><br><br><br>
+    </div>
+
+{% include 'html/footer.html' %}
+  {% endblock %}

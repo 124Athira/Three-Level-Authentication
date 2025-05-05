@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+{% include 'html/header.html' %}
+
+<div class="container">
+            <!--grid--><br><br>
+    <br>
+            <div class="grid-form">
+                <div class="grid-form1">
+                    <br>
+                    <h2 id="forms-example" class=""> View File </h2>
+                    <table class="table table-stripped">
+
+                        <tr>
+
+                            <td>Category</td>
+                            <td>Image</td>
+                        </tr>
+
+
+                        {% for i in res %}
+                        <tr>
+
+
+                            <td>{{i.category}}</td>
+                            <td> <img src="media/{{i.image}}" width="50%" height="auto" alt=""> </td>
+                        </tr>
+
+{% endfor %}
+                    </table>
+                </div>
+            </div>
+<br><br><br><br>
+    </div>
+
+{% include 'html/footer.html' %}
+  {% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+{% include 'html/header.html' %}
+
+<center><div class="container">
+            <!--grid--><br><br>
+    <br>
+            <div class="grid-form">
+                <div class="grid-form1">
+                    <br>
+                    <h1 id="forms-example" class="">Decoded secret message</h1>
+                    <h2>{{res}}</h2>
+
+                    
+                </div>
+            </div>
+<br><br><br><br>
+    </div></center>
+
+{% include 'html/footer.html' %}
+  {% endblock %}

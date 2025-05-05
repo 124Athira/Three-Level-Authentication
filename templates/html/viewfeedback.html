@@ -1,0 +1,35 @@
+{% include 'html/header.html' %}
+
+<div class="container">
+            <!--grid--><br><br>
+    <br>
+            <div class="grid-form">
+                <div class="grid-form1">
+                    <div class="heading_container">
+              <h2>
+                View Feedback
+              </h2>
+            </div>
+                     <table class="table table-striped">
+                <thead>
+                    <tr>
+                        
+                        <th scope="col">slno</th>
+                        <th scope="col">Feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for i in result %}
+                    <tr>
+                        <td></strong>{{forloop.counter}}</td>
+                        <td>{{i.message}}</td>
+                    </tr>
+                    
+                    {% endfor %}
+                </tbody>
+            </table>                </div>
+            </div>
+<br><br><br><br>
+    </div>
+{% include 'html/footer.html' %} 
